@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GCMIDFinder</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="input_help">Input the \"Project Number\" for your app. You can find this on your Google Developer Console</string>
+</resources>
