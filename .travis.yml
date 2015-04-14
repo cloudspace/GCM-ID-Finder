@@ -20,8 +20,7 @@ android:
 
     # Specify at least one system image,
     # if you need to run emulator(s) during your tests
-    # - sys-img-armeabi-v7a-android-22
-    # - sys-img-x86-android-22
+     - sys-img-armeabi-v7a-android-22
 
 after_success:
   - "./scripts/upload.sh"
