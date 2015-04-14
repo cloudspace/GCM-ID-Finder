@@ -1,13 +1,13 @@
 language: android
 android:
   licenses:
-    - android-sdk-license-[0-9a-f]{8}/
+    - android-sdk-license-[0-9a-f]{8}
 
   components:
     # Uncomment the lines below if you want to
     # use the latest revision of Android SDK Tools
-     - platform-tools
-     - tools
+    # - platform-tools
+    # - tools
 
     # The BuildTools version used by your project
     - build-tools-22.0.0
