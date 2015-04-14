@@ -1,13 +1,27 @@
-language: java
-before_install:
-  # download the latest android sdk and unzip
-  - wget http://dl.google.com/android/android-sdk_r22-linux.tgz
-  - tar -zxf android-sdk_r22-linux.tgz
-  - export ANDROID_HOME=`pwd`/android-sdk-linux
-  - export PATH=${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
-  # only update the sdk for the tools and platform-tools (1,2) and whatever api level
-  # you are building for android (run "android list sdk" to get the full list.  9 = 2.3.3 or API level 10
-  - android update sdk --filter 22 --no-ui --force
+language: android
+android:
+  components:
+    # Uncomment the lines below if you want to
+    # use the latest revision of Android SDK Tools
+     - platform-tools
+     - tools
+
+    # The BuildTools version used by your project
+    - build-tools-22
+
+    # The SDK version used to compile your project
+    - android-22
+
+    # Additional components
+    - extra-google-google_play_services
+    - extra-google-m2repository
+    - extra-android-m2repository
+    - addon-google_apis-google-19
+
+    # Specify at least one system image,
+    # if you need to run emulator(s) during your tests
+    # - sys-img-armeabi-v7a-android-22
+    # - sys-img-x86-android-22
 
 after_success:
   - "./scripts/upload.sh"
