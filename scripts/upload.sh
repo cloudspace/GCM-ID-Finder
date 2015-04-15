@@ -11,4 +11,5 @@ fi
 dir=$PWD
 parent="$(dirname "$dir")"
 
+echo "Building?"
 $parent/gradlew build
